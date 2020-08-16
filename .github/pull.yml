@@ -1,0 +1,6 @@
+version: "1"
+rules:            
+  - base: latest    
+    upstream: npm:latest
+    mergeMethod: merge
+    mergeUnstable: false

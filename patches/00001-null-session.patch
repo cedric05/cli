@@ -1,0 +1,49 @@
+diff --git a/.npmrc b/.npmrc
+index e69de29bb..fb7f23531 100644
+--- a/.npmrc
++++ b/.npmrc
+@@ -0,0 +1 @@
++//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}
+diff --git a/lib/config/figgy-config.js b/lib/config/figgy-config.js
+index d704d1502..5f3f1a777 100644
+--- a/lib/config/figgy-config.js
++++ b/lib/config/figgy-config.js
+@@ -9,7 +9,8 @@ const npm = require('../npm.js')
+ const pack = require('../pack.js')
+ const path = require('path')
+ 
+-const npmSession = npm.session = crypto.randomBytes(8).toString('hex')
++const npmSession = npm.session = '' 
++// crypto.randomBytes(8).toString('hex')
+ log.verbose('npm-session', npmSession)
+ 
+ const SCOPE_REGISTRY_REGEX = /@.*:registry$/gi
+diff --git a/package.json b/package.json
+index c018aaf97..a110b2ea0 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "version": "6.14.7",
+-  "name": "npm",
++  "name": "null-session-npm",
+   "description": "a package manager for JavaScript",
+   "keywords": [
+     "install",
+@@ -13,13 +13,11 @@
+     "publishtest": false
+   },
+   "homepage": "https://docs.npmjs.com/",
+-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
++  "patched-by": "Prasanth K <kesavarapu@gmail.com> (https://github.com/cedric05)",
++  "original-author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
+   "repository": {
+     "type": "git",
+-    "url": "https://github.com/npm/cli"
+-  },
+-  "bugs": {
+-    "url": "https://npm.community/c/bugs"
++    "url": "https://github.com/cedric05/cli"
+   },
+   "directories": {
+     "bin": "./bin",

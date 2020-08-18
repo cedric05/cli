@@ -19,12 +19,12 @@ index d704d1502..5f3f1a777 100644
  
  const SCOPE_REGISTRY_REGEX = /@.*:registry$/gi
 diff --git a/package.json b/package.json
-index c018aaf97..a110b2ea0 100644
+index c9df68e33..d2cb25c45 100644
 --- a/package.json
 +++ b/package.json
 @@ -1,6 +1,6 @@
  {
-   "version": "6.14.7",
+   "version": "6.14.8",
 -  "name": "npm",
 +  "name": "null-session-npm",
    "description": "a package manager for JavaScript",
